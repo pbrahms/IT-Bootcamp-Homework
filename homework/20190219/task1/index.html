@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS - if else</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		header {
+			width: 100%;
+			display: inline-flex;
+			justify-content: space-between;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>JS - if else</h1>
+		<h1>Filip Abramović</h1>
+	</header>
+	<main>
+
+		<input type="number" id="entry">
+		<button onClick="checkValue()">Run</button>
+		<br/><br/>
+		<div id="checkValueText">Enter number and click Run to start</div>
+		<br/>
+		
+
+		<br/><br/><br/><br/><br/><br/>
+		<h1>Additional Task</h1>
+		<br/><br/><br/>
+
+		<input type="number" id="entry1">
+		<input type="number" id="entry2">
+		<button onClick="calculate()">Calculate</button>
+		<br/><br/>
+		<div id="resultText">Result is:</div>
+		<br/>
+		
+
+	</main>
+
+	<script type="text/javascript">
+
+		let checkValueText = document.getElementById("checkValueText");
+		let entry = document.getElementById("entry");
+
+		function checkValue() {
+
+			let value = entry.value;
+			if (value > 20) {
+				checkValueText.innerHTML = "Number is larger then 20";
+			}
+			else {
+				checkValueText.innerHTML = "Number is smaller or equal to 20";
+			}
+		}
+
+		//Additional task
+
+		let resultText = document.getElementById("resultText");
+		let entry1 = document.getElementById("entry1");
+		let entry2 = document.getElementById("entry2");
+
+		function calculate() {
+
+			let value1 = entry1.value;
+			let value2 = entry2.value;
+			let sum = +value1 + +value2;
+
+			resultText.innerHTML = "Result is: " + sum;
+
+		}
+
+	</script>
+</body>
+</html>

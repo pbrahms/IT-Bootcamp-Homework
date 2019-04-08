@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>La-roche-posay</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            font-family: Verdana;
+        }
+        header {
+            max-width: 600px;
+            width: 100%;
+            display: flex;
+            /* flex-flow: row wrap; */
+            /* align-items: center; */
+            justify-content: space-between;
+        }
+        header a {
+            flex-grow: 1;
+            min-width: 200px;
+        }
+        #slogan {
+            display: flex;
+            color: #E88BC9;
+            font-weight: bold;
+            font-size: 13px;
+            align-self: flex-end;
+            margin-bottom: 10px;
+        }  
+        main {
+            display: flex;
+            max-width: 600px;
+            width: 100%;
+        }
+        main img {
+            /* this fixed streching */
+            align-self: flex-start;
+            width: 100%;
+            max-width: 100%
+            min-height: 177px;
+        }   
+        .main-container {
+            display: flex;
+            position: relative;
+            justify-content: flex-end;
+            align-items: center;
+
+        }
+        .welcome-container {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            background-color: white;
+            opacity: 0.9;
+            border-radius: 25px;
+            width: 200px;
+        }
+        .welcome-container-items:nth-child(n) {
+            margin-top: 5px;
+        }
+        button  {
+            background-color: lightgray;
+            box-shadow: none;
+            width: 100px;
+            font-size: 8pt;
+            padding: 10px 5px 10px 5px;
+        }
+        #navigation-label {
+            display: flex;
+            justify-content: flex-start;
+            max-width: 550px;
+            width: 100%;
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        #product-items {
+            display: grid;
+            width: 30%;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            grid-template-rows: repeat(3 140px);
+            grid-gap: 2em; 
+        }
+        .img-container {
+            display: flex;
+            position: relative;
+            margin: 12px;            
+            width: 140px;
+            height: 140px;
+            border: 1px solid black;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .img-container img {
+            max-height: 100px;
+        }
+        .price-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 38px;
+            width: 100%;
+            background-color: rgba(63, 200, 255, 0.7);
+            position: absolute;
+            bottom: 0;
+            color: white;
+            
+            border-top: 1px solid black;
+        }
+        /* #data-label, #full-name {
+            display: flex;
+            max-width: 450px;
+            width: 100%;
+            font-size: 1.2rem;
+        }
+        #data-label label {
+            font-weight: bold;
+        }
+        
+        #full-name {
+            flex-wrap: wrap;
+        }
+        
+        #full-name input {
+            flex-grow: 1;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        
+        #full-name input:nth-child(2n+1) {
+            margin-right: 10px;
+        }        
+        input[type=submit] {
+            padding:20px;
+            padding-right: 40px;
+            padding-left: 40px;
+            background-color: #545454;
+            border: 0;
+            color: #fff;
+            margin: 10px;
+        }
+        
+        @media only screen and (max-width: 389px) {
+            #full-name input:nth-child(2n+1) {
+                margin-right: 0px;
+            }
+        }
+        */
+        .foot {
+            background-color: #F6F6F6;
+            color: #545454;
+            font-size: 12px;
+            min-width: 600px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center; 
+            text-align: center;
+            }
+        .left {
+            font-size: 22px;
+            margin-left: auto;
+            padding-right: 5px;
+        }
+        .center {
+            font-size: 13px;
+            padding-left: 15%;
+            text-align: center;
+            min-width: 60%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .fa-facebook {
+            color: #385899;
+            padding-right: 5px;
+        }
+        .fa-youtube {
+            color: #D81713;
+            padding-right: 5px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a id="logo"><img src="logo.png" /></a>
+    <a id="slogan">ZA BOLJŠE ŽIVLJENJE OBČUTLJIVE KOŽE</a>
+</header>
+<main>
+    <div class="main-container">
+        <img src="mainimg.png" />
+        <div class="welcome-container"><h3 class="welcome-container-items">Welcome</h3><p class="welcome-container-items">Take a look at our brand-new products<button class="welcome-container-items">Latest products</button>
+        </div>
+    </div>
+
+</main>
+<section id="navigation-label">
+    <label>Home > All Products</label>
+</section>
+<section id="product-items">
+    <div class="img-container">
+        <img src="products/cicaplast baume b5.png">
+        <div class="price-container">18$</div>
+    </div>
+    <div class="img-container">
+        <img src="products/effaclar duo.png">
+        <div class="price-container">20$</div>
+    </div>
+    <div class="img-container"><img src="products/hyalu b5 serum.png">
+        <div class="price-container">15$</div></div>
+    <div class="img-container"><img src="products/lipikar baume ap+.png"><div class="price-container">30$</div></div>
+    <div class="img-container"><img src="products/Lipikar stick AP+.png"><div class="price-container">23$</div></div>
+    <div class="img-container"><img src="products/lipikar syndet ap+.png"><div class="price-container">20$</div></div>
+    <div class="img-container"><img src="products/micelarna voda ultra.png"><div class="price-container">11$</div></div>
+    <div class="img-container"><img src="products/toleriane sensitive.png"><div class="price-container">24$</div></div>
+    <div class="img-container"><img src="products/cicaplast baume b5.png"><div class="price-container">22$</div></div>
+</section>
+</body>
+<footer class="foot">
+    <div class="center">
+        www.laroche-posay.com.si | La Roche-Posay izdelki
+    </div>
+    <div class="left">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-youtube"></i>
+    </div>
+</footer>
+</div>
+</body>
+</html>

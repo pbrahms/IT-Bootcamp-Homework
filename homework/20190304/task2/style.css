@@ -1,0 +1,24 @@
+a:link, a:visited {
+    text-decoration: none;
+    color: #f5ff00;
+    text-shadow: 2px 2px 2px #000;
+    font-family: 'VT323', monospace;
+}
+a:hover {
+    color: #2f2fff;
+}
+
+nav {
+    display: flex;
+}
+nav ul {
+    list-style-type: none;
+}
+nav ul li {
+    font-size: 4em;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

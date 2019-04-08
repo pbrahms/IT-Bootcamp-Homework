@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>La-roche-posay</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Verdana;
+            font-size: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            width: 500px;
+            font-weight: bold;
+            grid-area: h;
+        }
+
+        #data-label {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            grid-template-rows: repeat(3 140px);
+            grid-gap: 2em; 
+            max-width: 450px;
+            width: 100%;
+            font-size: 1.2rem;
+            grid-template-areas: 
+            "h h h"
+            ". . ."
+            "c f f"
+        }
+
+        #data-label label {
+            font-weight: bold;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+            grid-template-rows: 2fr 1fr;
+            grid-row-gap: 5px;
+            grid-column-gap: 5px;
+            justify-items: center;
+            align-items: flex-start;
+        }
+
+        h3 {
+            font-size: 10px;
+            font-weight: normal;
+            display: block;
+        }
+
+        input[type=text] {
+            box-sizing: border-box;
+            background-image: linear-gradient(#e8ebeb, #ffffff);
+            border: 1px solid #f6f6f6;
+            width: 210px;
+            height: 35px;
+            padding: 10px;
+            margin: 5px;
+            margin-left: 0;
+            box-shadow: inset 2px 3px 8px -6px;
+        }
+
+        .gender {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 1px solid #f6f6f6;
+            padding: 5px;
+            width: 210px;
+            height: 35px;
+            margin: 5px;
+            margin-left: 0;
+            color: grey;
+            font-size: 14px;
+        }
+
+        select {
+            box-sizing: border-box;
+            background-image: linear-gradient(#ffffff, #e8ebeb);
+            border: 2px solid #f6f6f6;
+            height: 35px;
+            color: grey;
+            padding-left: 3px;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            color: white;
+            background-color: #555555;
+            border: 1px solid #555555;
+            width: 115px;
+            height: 40px;
+            font-size: 10px;
+        }
+
+        #slogan {
+            display: flex;
+            color: #E88BC9;
+            font-weight: bold;
+            font-size: 13px;
+            align-self: flex-end;
+            margin-bottom: 10px;
+        }  
+        header {
+            max-width: 600px;
+            width: 100%;
+            /*flex-basis: 600px;*/
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+        }
+        header a {
+            flex-grow: 1;
+            min-width: 200px;
+        }
+        main {
+            display: flex;
+            max-width: 600px;
+            width: 100%;
+        }
+        main img {
+            /* this fixed streching */
+            align-self: flex-start;
+            width: 100%;
+            max-width: 100%
+            min-height: 177px;
+        }   
+        .main-container {
+            display: flex;
+            position: relative;
+            justify-content: flex-end;
+            align-items: center;
+
+        }
+        #form1 {
+            max-height: 20px;
+            margin:10px;
+            align-content: center;
+        }
+        
+        
+        #full-name {
+            flex-wrap: wrap;
+        }
+        
+        #full-name input {
+            flex-grow: 1;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        
+        #full-name input:nth-child(2n+1) {
+            margin-right: 10px;
+        }   
+        #birth-date {
+            width: 500px;
+        }     
+        input[type=submit] {
+            padding:20px;
+            padding-right: 40px;
+            padding-left: 40px;
+            background-color: #545454;
+            border: 0;
+            color: #fff;
+            margin: 10px;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 250px 250px;
+            grid-template-rows: 2fr 1fr;
+            grid-row-gap: 5px;
+            grid-column-gap: 5px;
+            justify-items: center;
+            align-items: start;
+        }
+        
+        @media only screen and (max-width: 389px) {
+            #full-name input:nth-child(2n+1) {
+                margin-right: 0px;
+            }
+        }
+        .foot {
+            background-color: #F6F6F6;
+            color: #545454;
+            font-size: 12px;
+            min-width: 600px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center; 
+            text-align: center;
+            }
+        .left {
+            font-size: 22px;
+            margin-left: auto;
+            padding-right: 5px;
+        }
+        .center {
+            font-size: 13px;
+            padding-left: 15%;
+            text-align: center;
+            min-width: 60%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .fa-facebook {
+            color: #385899;
+            padding-right: 5px;
+        }
+        .fa-youtube {
+            color: #D81713;
+            padding-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <a id="logo"><img src="logo.png" /></a>
+    <a id="slogan">ZA BOLJŠE ŽIVLJENJE OBČUTLJIVE KOŽE</a>
+</header>
+<main>
+    <div class="main-container">
+        <img src="mainimg.png" />
+    </div>
+</main>
+<section id="data-label">
+      <h2>Vnesite svoje podatke v prazna polja:</h2><br/>
+      <form class="log-in" action="" method="post">
+      <div class="first-column">
+        <input type="text" name="name" placeholder="Ime">
+        <h3>Spol:</h3>
+        <div class="gender">
+          moški<input type="radio" name="gender" value="male" checked="">
+          ženski<input type="radio" name="gender" value="female">
+        </div>
+        <input type="text" name="city" placeholder="Mesto">
+        <input type="text" name="title" placeholder="Naslov">
+      </div>
+      <div class="second-column">
+        <input type="text" name="surname" placeholder="Priimek">
+        <h3>Datum rojstva:</h3>
+        <div class="birth-date">
+          <select name="birth-day" id="birth-day">
+            <option value="Day" selected="">DD</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+          <select name="birth-month" id="birth-month">
+            <option value="Month" selected="">MM</option>
+            <option value="January">jan</option>
+            <option value="February">feb</option>
+            <option value="March">mar</option>
+            <option value="April">apr</option>
+            <option value="May">maj</option>
+            <option value="June">jun</option>
+            <option value="July">jul</option>
+            <option value="August">avg</option>
+            <option value="September">sep</option>
+            <option value="October">okt</option>
+            <option value="November">nov</option>
+            <option value="December">dec</option>
+          </select>
+          <select name="birth-year" id="birth-year">
+            <option value="Year" selected="">GGGG</option>
+            <option value="1974">1974</option>
+            <option value="1975">1975</option>
+            <option value="1976">1976</option>
+            <option value="1977">1977</option>
+            <option value="1978">1978</option>
+            <option value="1979">1979</option>
+            <option value="1980">1980</option>
+            <option value="1981">1981</option>
+            <option value="1982">1982</option>
+            <option value="1983">1983</option>
+            <option value="1984">1984</option>
+            <option value="1985">1985</option>
+            <option value="1986">1986</option>
+            <option value="1987">1987</option>
+            <option value="1988">1988</option>
+            <option value="1989">1989</option>
+            <option value="1990">1990</option>
+            <option value="1990">1990</option>
+            <option value="1991">1992</option>
+            <option value="1992">1991</option>
+          </select>
+        </select>
+        </div>
+        <input type="text" name="postcode" placeholder="Poštna številka">
+        <input type="text" name="number" placeholder="Številka">
+      </div>
+        <button type="submit" name="button">POŠLJI
+          <i class="fas fa-angle-right"></i>
+        </button>
+      </form>
+    </section>
+<footer class="foot">
+    <div class="center">
+        www.laroche-posay.com.si | La Roche-Posay izdelki
+    </div>
+    <div class="left">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-youtube"></i>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿[      {
+        "id": 1,
+        "adress": "Leanne Str",
+        "number": "2",
+        "city": "London"
+      },
+      {
+        "id": 2,
+        "adress": "Shalow Str",
+        "number": "2",
+        "city": "New York"
+      },
+      {
+        "id": 3,
+        "adress": "Clementine Str",
+        "number": "85",
+        "city": "Moskow"
+      },
+      {
+        "id": 4,
+        "adress": "Omonia Sqr",
+        "number": "4",
+        "city": "Athens"
+      },
+      {
+        "id": 5,
+        "adress": "Green Str",
+        "number": "8",
+        "city": "Belgrade"
+      }
+    ]

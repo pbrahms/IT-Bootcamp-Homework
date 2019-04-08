@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+</head>
+<body>
+   <div id="printer">
+      <h1>Homework 28.02.2019</h1>
+      <button type="button" onclick="users()">Call users</button>
+      <button type="button" onclick="posts()">Call posts</button>
+   </div>
+
+   <script>
+      var x;
+      function users() {
+         var xhttp = new XMLHttpRequest();
+         console.log(xhttp);
+         xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+               console.log(this);
+               console.log(xhttp);
+               var x=this.responseText;
+                  var users = JSON.parse(x);
+  
+for (var i = 0; i < users.length; i++){
+   document.getElementById("printer").innerHTML += "<div>" + users[i].firstName +  "<br/>" + users[i].lastName + "<br/>" + users[i].username + users[i].email + "</div>";
+
+            }
+         }
+         };
+         xhttp.open("GET", "users.txt");
+         xhttp.send();
+
+}
+      var y;
+      function posts() {
+         var xhttp = new XMLHttpRequest();
+         console.log(xhttp);
+         xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+               console.log(this);
+               console.log(xhttp);
+               var y=this.responseText;
+         
+                        var posts = JSON.parse(y);
+  
+for (var i = 0; i < posts.length; i++){
+   document.getElementById("printer").innerHTML += "<div>" + posts[i].adress + "<br/>" + posts[i].number + "<br/>" + posts[i].city + "</div>";
+   }
+         }
+         };
+         xhttp.open("GET", "posts.txt");
+         xhttp.send();
+      }
+
+   </script>
+</body>
+</html>

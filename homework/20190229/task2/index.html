@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header {
+        border: 1px solid red;
+       min-width: 600px;
+    }
+    header ul {
+        display: flex;
+        flex-grow: 1;
+        list-style-type: none;
+    }
+    header ul li {
+        flex-basis:50px;
+    }
+    a{
+        color: blue;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<header>
+<ul>
+<li>-menu-</li>
+<li><button type="button" onclick="getUsers('firstcall')">AllUsers</button></li>
+<li><button type="button" onclick="getPosts('firstcall')">AllPosts</button></li>
+</ul>    
+</header>
+<div class="container">
+    
+</div>
+<script src="app.js"></script>
+
+
+
+</body>
+</html>

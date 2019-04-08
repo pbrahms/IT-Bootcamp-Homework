@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS - if else</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body {
+			display: flex;
+			align-content: center;
+			flex-wrap: wrap;
+		}
+		header {
+			width: 100%;
+			display: inline-flex;
+			justify-content: space-between;
+		}
+	</style>
+</head>
+<body>
+	<header>
+
+		<h1>Filip Abramović</h1>
+		<h1>22.02.2019.</h1>
+		
+	</header>
+
+	<main>
+
+		<br/><br/><br/>
+
+		<p>01. This is the first paragraph.</p>
+		<p>02. This is the second paragraph.</p>
+		<p id="thirdParagraph">03. This is the third paragraph.</p>
+		<p>04. This is the fourth paragraph.</p>
+		<p>05. This is the fifth paragraph.</p>
+		<p>06. This is the sixth paragraph.</p>
+		<p>07. This is the seventh paragraph.</p>
+		<p>08. This is the eighth paragraph.</p>
+		<p>09. This is the ninth paragraph.</p>
+		<p>10. This is the tenth paragraph.</p>
+		<p>11. This is the eleventh paragraph.</p>
+
+		<br/><br/><br/>
+
+		<button onClick="task1()">Run Task 1</button>
+		<button onClick="task2()">Run Task 2</button>
+		<button onClick="task3()">Run Task 3</button>
+
+		<br/><br/>		
+
+	</main>
+
+	<script type="text/javascript">
+
+		
+		var counter = document.querySelectorAll('p').length;
+
+			//document.getElementsByTagName("h1")[0].setAttribute("class", "democlass bigfont");
+			//document.getElementsByTagName("img")[i].style.transform = "rotate(20deg)";
+
+		function task1() {
+			document.getElementById("thirdParagraph").style.backgroundColor = 'orange';
+		}
+
+		function task2() {
+
+			for (i = 0; i < counter; i++) {
+				document.querySelectorAll("p")[i].style.color = 'red';
+			}
+
+		}
+
+		function task3() {
+
+				document.querySelectorAll("p")[6].style.fontSize = '20px';
+				document.querySelectorAll("p")[9].style.fontSize = '20px';
+
+			for (i = 0; i < counter; i++) {
+				document.querySelectorAll('p')[i].innerText = "Changed text - " + document.querySelectorAll('p')[i].innerText;
+			}
+
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scientists</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		main {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			width: 100vw;
+			height: 100vh;
+		}
+		div {
+			margin: 50px;
+		}
+	</style>
+</head>
+<body>
+	<main id="main">
+		
+	</main>
+
+ <script type="text/javascript">
+ 	var scientists = {
+
+ 		s1: {
+ 			image: "images/injutn.jpg",
+ 			firstname: "Isaac",
+ 			surname: "Newton",
+ 			inventions: ['Newtonian mechanics', ' Universal gravitation']
+ 		},
+
+ 		s2: {
+ 			image: "images/mfaradej.jpg",
+ 			firstname: "Michael",
+ 			surname: "Faraday",
+ 			inventions: ['Faraday cage', ' Faraday constant']
+ 		},
+
+ 		s3: {
+ 			image: "images/ntesla.jpg",
+ 			firstname: "Nikola",
+ 			surname: "Tesla",
+ 			inventions: ['Alternating current']
+ 		},
+
+ 		s4: {
+ 			image: "images/pitagora.jpg",
+ 			firstname: "Pythagoras",
+ 			surname: "of Samos",
+ 			inventions: ['Pythagorean theorem']
+ 		}
+
+	}
+	document.getElementById("main");
+	for (x in scientists) {
+		main.innerHTML += '<div>' + '<img src="' + (scientists[x].image) + '"/>' + "<br/>" + (scientists[x].firstname) + "<br/>" + (scientists[x].surname) + "<br/>" + (scientists[x].inventions) + "<br/>" + '</div>';
+	}
+
+ </script>
+
+</body>
+</html> 

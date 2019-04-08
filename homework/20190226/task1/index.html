@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Top Users</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<h1>Top Users</h1>
+	<hr/>
+	<main id="main"></main>
+
+	<script type="text/javascript">
+
+	    let dataFromServer = `
+	    [
+	      {
+	        "id": 1,
+	        "name": "Clementine Bauch",
+	        "username": "Samantha",
+	        "email": "Nathan@yesenia.net"
+
+	      },
+	      {
+	        "id": 2,
+	        "name": "Ervin Howell",
+	        "username": "Antonette",
+	        "email": "Shanna@melissa.tv"
+	      },
+	      {
+	        "id": 3,
+	        "name": "Leanne Graham",
+	        "username": "Bret",
+	        "email": "Sincere@april.biz"
+	      },
+	      {
+	        "id": 4,
+	        "name": "Patricia Lebsack",
+	        "username": "Karianne",
+	        "email": "Julianne.OConner@kory.org"
+	      },
+	      {
+	        "id": 5,
+	        "name": "Chelsey Dietrich",
+	        "username": "Kamren",
+	        "email": "Lucio_Hettinger@annie.ca"
+	      }
+	    ]`;
+
+	    let users = JSON.parse(dataFromServer);
+	    let print = document.getElementById("main");
+	    let insidesection = '';
+
+	    for (x in users) {		
+			insidesection += '<img class="element" src="images/' + (users[x].username) + '.jpg"/>';
+			insidesection += '<div class="element">' + (users[x].name) + '<br/>' + (users[x].username) + '</div>';
+			insidesection += '<button class="element" onclick="email()">Email me</button>';
+			print.innerHTML += '<section>' + insidesection + '</section>';
+			insidesection = '';
+		}
+
+	</script>
+
+</body>
+</html>

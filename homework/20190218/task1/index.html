@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS DOM Update</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		header {
+			width: 100%;
+			display: inline-flex;
+			justify-content: space-between;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Task 1: JS DOM Update</h1>
+		<h1>Filip Abramović</h1>
+	</header>
+	<div id="pageText">Sample text - Click button to run program</div>
+	<br/>
+	<button onClick="replaceText()">Run</button>
+	<button onClick="replaceTextAdditional()">Run - Additional</button>
+
+	<script type="text/javascript">
+
+		function replaceText() {
+			let divText = document.getElementById("pageText");
+			divText.innerHTML = "Hello, this is the new text";
+		}
+		function replaceTextAdditional() {
+			let divText = document.getElementById("pageText");
+			divText.innerHTML += "<br/ > Hello, this is the new text";
+			console.log("Hello, this is the new text.");
+		}
+
+	</script>
+</body>
+</html>

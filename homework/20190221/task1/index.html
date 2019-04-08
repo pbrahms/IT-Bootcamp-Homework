@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>La-roche-posay</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            font-family: Verdana;
+        }
+        header {
+            max-width: 600px;
+            width: 100%;
+            display: flex;
+            /* flex-flow: row wrap; */
+            /* align-items: center; */
+            justify-content: space-between;
+        }
+        header a {
+            flex-grow: 1;
+            min-width: 200px;
+        }
+        #slogan {
+            display: flex;
+            color: #E88BC9;
+            font-weight: bold;
+            font-size: 13px;
+            align-self: flex-end;
+            margin-bottom: 10px;
+        }  
+        main {
+            display: flex;
+            max-width: 600px;
+            width: 100%;
+        }
+        main img {
+            /* this fixed streching */
+            align-self: flex-start;
+            width: 100%;
+            max-width: 100%
+            min-height: 177px;
+        }   
+        .main-container {
+            display: flex;
+            position: relative;
+            justify-content: flex-end;
+            align-items: center;
+
+        }
+        button  {
+            background-color: lightgray;
+            box-shadow: none;
+            width: 100px;
+            font-size: 8pt;
+            padding: 10px 5px 10px 5px;
+        }
+        #navigation-label {
+            display: flex;
+            justify-content: flex-start;
+            max-width: 550px;
+            width: 100%;
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        #product-items {
+            display: grid;
+            width: 30%;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            grid-template-rows: repeat(3 140px);
+            grid-gap: 2em; 
+        }
+        .img-container {
+            display: flex;
+            position: relative;
+            margin: 12px;            
+            width: 140px;
+            height: 140px;
+            border: 1px solid black;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .img-container img {
+            max-height: 100px;
+        }
+        .price-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 38px;
+            width: 100%;
+            background-color: rgba(63, 200, 255, 0.7);
+            position: absolute;
+            bottom: 0;
+            color: white;
+            
+            border-top: 1px solid black;
+        }
+        .left {
+            font-size: 22px;
+            margin-left: auto;
+            padding-right: 5px;
+        }
+        .center {
+            font-size: 13px;
+            padding-left: 15%;
+            text-align: center;
+            min-width: 60%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .fa-facebook {
+            color: #385899;
+            padding-right: 5px;
+        }
+        .fa-youtube {
+            color: #D81713;
+            padding-right: 5px;
+        }
+        .circles {
+            display: inline-flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 10px;
+            left: 50%; 
+        }
+        .circle {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: aqua;
+            margin: 10px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <img src="img/mainimg1.png">
+    <div id="circles">
+        <div onclick="imgChange(0)" class="circle"></div>
+        <div onclick="imgChange(1)" class="circle"></div>
+        <div onclick="imgChange(2)" class="circle"></div>
+    </div>
+
+</main>
+<section id="product-items">
+    <div class="img-container" onclick="basket(18)"><img src="products/cicaplast baume b5.png"><div class="price-container">18$</div></div>
+    <div class="img-container" onclick="basket(20)"><img src="products/effaclar duo.png"><div class="price-container">20$</div></div>
+    <div class="img-container" onclick="basket(15)"><img src="products/hyalu b5 serum.png"><div class="price-container">15$</div></div>
+    <div class="img-container" onclick="basket(30)"><img src="products/lipikar baume ap+.png"><div class="price-container">30$</div></div>
+    <div class="img-container" onclick="basket(23)"><img src="products/Lipikar stick AP+.png"><div class="price-container">23$</div></div>
+    <div class="img-container" onclick="basket(20)"><img src="products/lipikar syndet ap+.png"><div class="price-container">20$</div></div>
+</section>
+
+    <div class="basket"> Sum: <br/>
+        <div id="sum">0 $</div>
+    </div>
+</body>
+
+
+<script type="text/javascript">
+    let images = ["img/mainimg1.png", "img/mainimg2.png", "img/mainimg3.png"];   
+function imgChange(imgtag) {
+    let all = document.getElementsByTagName("img")[0];
+    all.src = images[imgtag];
+}
+
+
+var sum = 0;
+function basket(value){
+    sum += value;
+    document.getElementById("sum").innerHTML = sum + " $"
+}
+
+
+</script>
+</div>
+</body>
+</html>

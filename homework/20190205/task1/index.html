@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		nav.sticky {
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+			padding: 5px;
+			background-color: #777;
+			color: white;
+			z-index: 100;
+		}
+		img {
+		    display: block;
+  			margin: 0 auto;
+  			margin-left: 10px;
+			margin-right: 10px;
+		}
+		#section1, #section2, #section3 {
+    		position: relative;
+    		margin: auto;
+    		width: 100%;
+    		text-align:center
+		}
+		#section2 {
+			width: 30%;
+			margin-top: -100px;
+		}
+		#section1 img {
+			position: relative;
+    		display:inline-block;
+			border: 5px solid red;
+		}
+		#section1 img:nth-child(2n+0) {
+			border: 5px solid blue;
+		}
+		#section2 img {
+    		border: 10px solid gold;
+		}
+		#section2 div {
+			position: absolute;
+		}
+		#div1 {
+			left: 50px;
+		}
+		#div2 {
+			left: 100px;
+		}
+		#div3 {
+			left: 150px;
+		}
+		#div4 {
+			left: 200px;
+		}
+		#div5 {
+			left: 250px;
+		}
+		#div6 {
+			left: 300px;
+		}
+		#div1:hover {
+			z-index: 1;
+		}
+		#div2:hover {
+			z-index: 1;
+		}
+		#div2:hover {
+			z-index: 1;
+		}
+		#div3:hover {
+			z-index: 1;
+		}
+		#div4:hover {
+			z-index: 1;
+		}
+		#div5:hover {
+			z-index: 1;
+		}
+		#div6:hover {
+			z-index: 1;
+		}
+		#section3 img {
+			position: relative;
+    		display: inline-block;
+		}
+		#section3 img:nth-last-child(3n+0) {
+			border: 5px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<nav class="sticky">
+		This is a sticky stripe.
+	</nav>
+	<br/><br/><br/><br/><br/><br/><br/><br/>
+	<section id="section1">
+		<img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/>
+		<img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/>
+		<img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/>
+		<img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/>
+		<img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/>
+		<img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/>
+	</section>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<section id="section2">
+		<div id="div6"><img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/></div>
+		<div id="div5"><img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/></div>
+		<div id="div4"><img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/></div>
+		<div id="div3"><img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/></div>
+		<div id="div2"><img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/></div>
+		<div id="div1"><img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/></div>
+	</section>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<section id="section3">
+		<img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/>
+		<img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/>
+		<img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/>
+		<img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/>
+		<img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/>
+		<img src="https://cdn.shopify.com/s/files/1/0886/8294/products/Autumn_Skyway_-_1368_medium.jpg"/>
+	</section>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</body>
+</html>

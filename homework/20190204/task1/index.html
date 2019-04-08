@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		img[alt="mycompany"]
+		{
+			width: 150px;
+		}
+		img[alt^="partner"] {
+			width: 50px;
+		}
+		p {
+			font-size: 13px;
+		}
+		div + p {
+			color: #dddddd;
+			font-size: 16px;
+		}
+		ul, ol {
+			font-size: 14px
+		}
+		a {
+			display: none;
+		}
+		a:link {
+			color: lightblue;
+			font-size: 30px;
+		}
+		a:visited {
+			font-size: 20px;
+		}
+        #hidden:hover a {
+            display: block;
+        }
+
+	</style>
+</head>
+<body>
+	<header>
+		<img src="https://about.canva.com/wp-content/uploads/sites/3/2016/08/Cafe-Logo.png" alt="mycompany">
+	</header>
+	<section>
+		<div>
+			<ul>
+				<li>li1</li>
+				<li>li2</li>
+				<li>li3</li>
+			</ul>
+		</div>
+	<p>custom text 1</p>
+	<p>custom text 2</p>
+	<div id="hidden">
+		<img src="https://about.canva.com/wp-content/uploads/sites/3/2016/08/Cafe-Logo.png" style="border: 5px solid grey; width: 80px">
+		<a href="http://www.google.com" target="_blank">Invisible link</a>
+	</div>
+	</section>
+	<footer>
+		<img src="https://about.canva.com/wp-content/uploads/sites/3/2016/08/Cafe-Logo.png" alt="partner1">
+		<img src="https://about.canva.com/wp-content/uploads/sites/3/2016/08/Cafe-Logo.png" alt="partner2">
+
+	</footer>
+</body>
+</html>
